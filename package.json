@@ -1,0 +1,26 @@
+{
+  "name": "q-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "q-lint-scan": "q-lint scan",
+    "q-lint-fix": "q-lint fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "q-lint": "^0.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "q-lint commit-file-scan",
+      "commit-msg": "q-lint commit-msg-scan"
+    }
+  }
+}
