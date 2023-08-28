@@ -2,10 +2,10 @@
   "name": "q-hooks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
+    "doc:dev": "dumi dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "q-lint-scan": "q-lint scan",
     "q-lint-fix": "q-lint fix"
@@ -14,7 +14,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@umijs/fabric": "^4.0.1",
+    "babel-plugin-import": "^1.13.8",
+    "dumi": "^2.2.7",
     "husky": "^8.0.3",
+    "prettier": "^3.0.2",
     "q-lint": "^0.0.2"
   },
   "husky": {
