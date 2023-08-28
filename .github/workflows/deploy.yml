@@ -6,16 +6,16 @@
 # This workflow will install Deno then run `deno lint` and `deno test`.
 # For more information see: https://github.com/denoland/setup-deno
 
-name: Deno
+name: Build and deploy
 
 on:
   push:
-    branches: ["master"]
+    branches: ['master']
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     steps:
       - name: CheckOut
         uses: actions/checkout@v3
@@ -25,8 +25,7 @@ jobs:
         with:
           node-version: 16.18.0
       - name: Install and Build
-        run:
-          npm i pnpm -g
+        run: npm i pnpm -g
           pnpm run init
           pnpm run build:doc
         env:
