@@ -1,0 +1,25 @@
+{
+  "name": "hooks",
+  "version": "0.0.1",
+  "description": "React 业务 Hooks",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "build": "gulp && webpack-cli"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "es",
+    "metadata.json",
+    "package.json",
+    "README.md"
+  ],
+  "author": "joe",
+  "license": "ISC"
+}
