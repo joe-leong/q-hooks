@@ -5,9 +5,7 @@
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "types": "./lib/index.d.ts",
-  "scripts": {
-    "build": "gulp && webpack-cli"
-  },
+  "scripts": {},
   "keywords": [
     "react",
     "hooks"
