@@ -25,7 +25,8 @@ jobs:
         with:
           node-version: 16.18.0
       - name: Install and Build
-        run: npm i pnpm -g
+        run: |
+          npm i pnpm -g
           pnpm run init
           pnpm run build:doc
         env:
