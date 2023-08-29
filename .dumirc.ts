@@ -12,7 +12,7 @@ export default defineConfig({
       rel: 'stylesheet',
       href: 'https://unpkg.com/@alifd/theme-design-pro@0.6.2/dist/next-noreset.min.css',
     },
-    { rel: 'stylesheet', href: '/style.css' },
+    { rel: 'stylesheet', href: '/q-hooks/style.css' },
   ],
   themeConfig: {
     name: 'q-hooks',
@@ -27,9 +27,7 @@ export default defineConfig({
         link: '/hooks',
       },
     ],
-    sidebar: {
-      '/': [],
-    },
+    sidebar: {},
     footer: `Copyright (c) © ${new Date().getFullYear()} by joe, All Rights Reserved`,
   },
   resolve: {

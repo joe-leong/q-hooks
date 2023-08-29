@@ -1,8 +1,7 @@
 ---
 title: 首页
 hero:
-  image: /q-hooks/logo.png
-  desc: React 业务 Hooks
+  description: React 业务 Hooks
   actions:
     - text: 指南
       link: /guide
