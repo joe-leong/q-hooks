@@ -17,4 +17,14 @@ gulp.task('es', function () {
   return tsProject.src().pipe(tsProject()).pipe(babel()).pipe(gulp.dest('es/'));
 });
 
-exports.default = gulp.series('clean', 'es');
+gulp.task('cjs', function () {
+  return gulp.src(['./es/**/*.js']).pipe(
+    babel({
+      configFile: '../../.babelrc',
+    }).pipe(gulp.dest('lib/')),
+  );
+});
+
+gulp.task('umd', function () {});
+
+exports.default = gulp.series('clean', 'es', 'cjs');

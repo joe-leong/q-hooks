@@ -8,6 +8,15 @@ importers:
 
   .:
     devDependencies:
+      '@babel/plugin-transform-runtime':
+        specifier: ^7.22.10
+        version: 7.22.10(@babel/core@7.22.11)
+      '@babel/preset-env':
+        specifier: ^7.22.10
+        version: 7.22.10(@babel/core@7.22.11)
+      '@babel/preset-react':
+        specifier: ^7.22.5
+        version: 7.22.5(@babel/core@7.22.11)
       '@umijs/fabric':
         specifier: ^4.0.1
         version: 4.0.1(postcss@8.4.28)
@@ -1360,6 +1369,23 @@ packages:
     dependencies:
       '@babel/core': 7.22.11
       '@babel/helper-plugin-utils': 7.22.5
+    dev: true
+
+  /@babel/plugin-transform-runtime@7.22.10(@babel/core@7.22.11):
+    resolution: {integrity: sha512-RchI7HePu1eu0CYNKHHHQdfenZcM4nz8rew5B1VWqeRKdcwW5aQ5HeG9eTUbWiAS1UrmHVLmoxTWHt3iLD/NhA==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.22.11
+      '@babel/helper-module-imports': 7.22.5
+      '@babel/helper-plugin-utils': 7.22.5
+      babel-plugin-polyfill-corejs2: 0.4.5(@babel/core@7.22.11)
+      babel-plugin-polyfill-corejs3: 0.8.3(@babel/core@7.22.11)
+      babel-plugin-polyfill-regenerator: 0.5.2(@babel/core@7.22.11)
+      semver: 6.3.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@babel/plugin-transform-shorthand-properties@7.22.5(@babel/core@7.22.11):
