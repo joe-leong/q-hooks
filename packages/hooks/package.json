@@ -5,7 +5,10 @@
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "types": "./lib/index.d.ts",
-  "scripts": {},
+  "sideEffects": false,
+  "scripts": {
+    "build": "gulp"
+  },
   "keywords": [
     "react",
     "hooks"
@@ -19,5 +22,8 @@
     "README.md"
   ],
   "author": "joe",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@alifd/next": "^1.26.23"
+  }
 }
