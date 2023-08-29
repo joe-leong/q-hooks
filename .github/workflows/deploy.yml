@@ -37,3 +37,9 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      - name: Send an email
+        uses: actions/email@v2
+        with:
+          to: zdnf_lgq@163.com
+          subject: hooks docs deploy notify
+          body: hooks docs deploy successfully
