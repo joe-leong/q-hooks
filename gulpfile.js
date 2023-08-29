@@ -25,6 +25,8 @@ gulp.task('cjs', function () {
   );
 });
 
-gulp.task('umd', function () {});
+gulp.task('copyReadme', async function () {
+  await gulp.src('../../README.md').pipe(gulp.dest('../../packages/hooks'));
+});
 
-exports.default = gulp.series('clean', 'es', 'cjs');
+exports.default = gulp.series('clean', 'es', 'cjs', 'copyReadme');

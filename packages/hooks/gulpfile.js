@@ -1,4 +1,53 @@
 const commonFile = require('../../gulpfile');
 const gulp = require('gulp');
+const fg = require('fast-glob');
+const fs = require('fs');
+const fse = require('fs-extra');
+const gm = require('gray-matter');
 
-exports.default = gulp.series(commonFile.default);
+async function genDesc(mdPath) {
+  if (!fs.existsSync(mdPath)) return;
+  const mdFile = fs.readFileSync(mdPath, 'utf-8');
+  const { content } = gm(mdFile);
+  let description =
+    (content.replace(/\r\n/g, '\n').match(/# \w+[\s\n]+(.+?)(?:, |\. |\n|\.\n)/m) || [])[1] || '';
+  description = description.trim();
+  description = description.charAt(0).toLowerCase() + description.slice(1);
+  return description;
+}
+
+async function genMetaData() {
+  const metaData = {
+    functions: [],
+  };
+  const hooks = fg
+    .sync('src/use*', {
+      onlyDirectories: true,
+    })
+    .map((hook) => hook.replace('src/', ''))
+    .sort();
+  await Promise.allSettled(
+    hooks.map(async (hook) => {
+      const description = await genDesc(`src/${hook}/index.md`);
+      return {
+        name: hook,
+        description,
+      };
+    }),
+  ).then((res) => {
+    metaData.functions = res.map((item) => {
+      if (item.status === 'fulfilled') {
+        return item.value;
+      }
+      return null;
+    });
+  });
+  return metaData;
+}
+
+gulp.task('metadata', async function () {
+  const metadata = await genMetaData();
+  await fse.writeJson('metadata.json', metadata, { spaces: 2 });
+});
+
+exports.default = gulp.series(commonFile.default, 'metadata');
