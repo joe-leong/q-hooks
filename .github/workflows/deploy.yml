@@ -37,9 +37,14 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      - name: Send an email
-        uses: actions/email@v2
+      - name: CINotify Email
+        # You may pin to the exact commit or the version.
+        # uses: cinotify/github-action@feaa5fed1588048bd8e14d6b9c26964f9d164a25
+        uses: cinotify/github-action@v1.1.2
         with:
+          # Recipient email address
           to: zdnf_lgq@163.com
+          # Email subject
           subject: hooks docs deploy notify
+          # Email body
           body: hooks docs deploy successfully
