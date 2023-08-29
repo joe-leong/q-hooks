@@ -25,5 +25,11 @@
   "license": "ISC",
   "devDependencies": {
     "@alifd/next": "^1.26.23"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
   }
 }

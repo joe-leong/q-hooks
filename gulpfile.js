@@ -29,4 +29,12 @@ gulp.task('copyReadme', async function () {
   await gulp.src('../../README.md').pipe(gulp.dest('../../packages/hooks'));
 });
 
-exports.default = gulp.series('clean', 'es', 'cjs', 'copyReadme');
+gulp.task('declaration', function () {
+  const tsProject = ts.createProject('tsconfig.pro.json', {
+    declaration: true,
+    emitDeclarationOnly: true,
+  });
+  return tsProject.src().pipe(tsProject()).pipe(gulp.dest('es/')).pipe(gulp.dest('lib/'));
+});
+
+exports.default = gulp.series('clean', 'es', 'cjs', 'copyReadme', 'declaration');

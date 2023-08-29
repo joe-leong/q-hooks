@@ -1,1 +1,3 @@
-console.log('hello');
+import useToggle from './useToggle';
+
+export { useToggle };
