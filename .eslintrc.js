@@ -1,1 +1,1 @@
-module.exports = { extends: ['q-eslint-config/typescript/react', 'prettier'] };
+module.exports = { extends: ['q-eslint-config/typescript', 'prettier'] };

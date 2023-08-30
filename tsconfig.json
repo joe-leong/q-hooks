@@ -2,6 +2,7 @@
   "root": true,
   "compilerOptions": {
     "target": "ES5",
+    "lib": ["es2015"],
     "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,

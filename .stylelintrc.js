@@ -1,1 +1,1 @@
-module.exports = { extends: 'q-stylelint-config', };
+module.exports = { extends: 'q-stylelint-config' };
