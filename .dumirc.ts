@@ -5,7 +5,7 @@ export default defineConfig({
   logo: '/q-hooks/logo.png',
   publicPath: '/q-hooks/',
   history: {
-    type: 'hash',
+    type: 'browser',
   },
   links: [
     {
@@ -27,19 +27,11 @@ export default defineConfig({
         link: '/hooks/use-toggle',
       },
     ],
-    sidebar: {
-      '/hooks': [
-        {
-          title: '状态',
-          children: [{ title: 'useToggle', link: '/hooks/use-toggle' }],
-        },
-      ],
-    },
     footer: `Copyright (c) © ${new Date().getFullYear()} by joe, All Rights Reserved`,
   },
   resolve: {
     docDirs: ['docs'],
-    atomDirs: [{ type: 'hooks', dir: 'packages/hooks/src' }],
+    atomDirs: [{ type: 'hook', dir: 'packages/hooks/src' }],
   },
   alias: {
     qHooks: process.cwd() + '/packages/hooks/src/index.ts',
