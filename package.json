@@ -11,6 +11,7 @@
     "build:doc": "dumi build",
     "clean-dist": "rimraf 'packages/hooks/{lib,es,node_modules,dist}'",
     "clean": "pnpm run clean-dist && rimraf node_modules",
+    "test:watch": "jest --watch",
     "test": "jest",
     "q-lint-scan": "q-lint scan",
     "q-lint-fix": "q-lint fix"
