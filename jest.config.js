@@ -10,6 +10,9 @@ module.exports = {
   transform: {
     '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
   },
+  moduleNameMapper: {
+    '^lodash-es$': 'lodash',
+  },
   collectCoverageFrom: [
     '<rootDir>/**/src/**/*.{js,jsx,ts,tsx}',
     '!**/demo/**',
@@ -18,5 +21,5 @@ module.exports = {
     '!**/lib/**',
     '!**/dist/**',
   ],
-  transformIgnorePatterns: ['^.+\\.js$'],
+  transformIgnorePatterns: ['^.+\\.js$', '<rootDir>/node_modules/(?!lodash-es)'],
 };

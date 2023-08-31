@@ -1,5 +1,5 @@
 ---
-group: DOM
+group: dom
 ---
 
 # useTitle
