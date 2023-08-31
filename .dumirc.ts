@@ -3,6 +3,7 @@ export default defineConfig({
   title: 'q-hooks',
   favicons: ['/q-hooks/logo.png'],
   logo: '/q-hooks/logo.png',
+  base: '/q-hooks/',
   publicPath: '/q-hooks/',
   history: {
     type: 'browser',
