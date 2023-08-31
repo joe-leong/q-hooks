@@ -6,6 +6,7 @@ import useUnmount from './useUnmount';
 import useMemoizedFn from './useMemoizedFn';
 import useDebounceFn from './useDebounceFn';
 import useDebounce from './useDebounce';
+import useMount from './useMount';
 
 export {
   useToggle,
@@ -16,4 +17,5 @@ export {
   useMemoizedFn,
   useDebounceFn,
   useDebounce,
+  useMount,
 };
