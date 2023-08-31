@@ -8,6 +8,7 @@ import useDebounceFn from './useDebounceFn';
 import useDebounce from './useDebounce';
 import useMount from './useMount';
 import useMap from './useMap';
+import useSet from './useSet';
 
 export {
   useToggle,
@@ -20,4 +21,5 @@ export {
   useDebounce,
   useMount,
   useMap,
+  useSet,
 };
