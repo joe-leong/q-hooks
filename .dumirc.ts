@@ -24,7 +24,7 @@ export default defineConfig({
       },
       {
         title: 'Hooks',
-        link: '/hooks/use-toggle',
+        link: '/hooks/use-boolean',
       },
     ],
     footer: `Copyright (c) © ${new Date().getFullYear()} by joe, All Rights Reserved`,
