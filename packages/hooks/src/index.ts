@@ -11,6 +11,7 @@ import useMap from './useMap';
 import useSet from './useSet';
 import useCookieState from './useCookieState';
 import useGetState from './useGetState';
+import usePrevious from './usePrevious';
 
 export {
   useToggle,
@@ -26,4 +27,5 @@ export {
   useSet,
   useCookieState,
   useGetState,
+  usePrevious,
 };
