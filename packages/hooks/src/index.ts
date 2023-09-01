@@ -10,6 +10,7 @@ import useMount from './useMount';
 import useMap from './useMap';
 import useSet from './useSet';
 import useCookieState from './useCookieState';
+import useGetState from './useGetState';
 
 export {
   useToggle,
@@ -24,4 +25,5 @@ export {
   useMap,
   useSet,
   useCookieState,
+  useGetState,
 };
