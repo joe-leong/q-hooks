@@ -15,6 +15,9 @@ import usePrevious from './usePrevious';
 import useResetState from './useResetState';
 import useThrottleFn from './useThrottleFn';
 import useThrottle from './useThrottle';
+import useUnmountedRef from './useUnmountedRef';
+import useSafeState from './useSafeState';
+import useEventListener from './useEventListener';
 
 export {
   useToggle,
@@ -34,4 +37,7 @@ export {
   useResetState,
   useThrottleFn,
   useThrottle,
+  useUnmountedRef,
+  useSafeState,
+  useEventListener,
 };
