@@ -13,6 +13,8 @@ import useCookieState from './useCookieState';
 import useGetState from './useGetState';
 import usePrevious from './usePrevious';
 import useResetState from './useResetState';
+import useThrottleFn from './useThrottleFn';
+import useThrottle from './useThrottle';
 
 export {
   useToggle,
@@ -30,4 +32,6 @@ export {
   useGetState,
   usePrevious,
   useResetState,
+  useThrottleFn,
+  useThrottle,
 };
