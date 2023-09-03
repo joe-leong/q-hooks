@@ -18,6 +18,9 @@ import useThrottle from './useThrottle';
 import useUnmountedRef from './useUnmountedRef';
 import useSafeState from './useSafeState';
 import useEventListener from './useEventListener';
+import useHover from './useHover';
+import useInViewport from './useInViewport';
+import { configResponsive, useResponsive } from './useResponsive';
 
 export {
   useToggle,
@@ -40,4 +43,8 @@ export {
   useUnmountedRef,
   useSafeState,
   useEventListener,
+  useHover,
+  useInViewport,
+  configResponsive,
+  useResponsive,
 };
