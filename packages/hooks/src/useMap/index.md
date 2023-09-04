@@ -10,10 +10,10 @@ group: 状态
 
 <code src="./demo/demo1.tsx" ></code>
 
-## `code`
+## API
 
-```
-code
+```typescript
+const [map, { set, setAll, remove, reset, get }] = useMap<K, V>(initialValue);
 ```
 
 ### `code`

@@ -25,6 +25,7 @@ import useLongPress from './useLongPress';
 import useKeyPress from './useKeyPress';
 import useRafState from './useRafState';
 import useUpdate from './useUpdate';
+import useUpdateEffect from './useUpdateEffect';
 
 export {
   useToggle,
@@ -55,4 +56,5 @@ export {
   useKeyPress,
   useRafState,
   useUpdate,
+  useUpdateEffect,
 };
