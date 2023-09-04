@@ -2,8 +2,8 @@
  * title: 基础用法
  * desc: 设置页面标题
  */
-import useTitle from '..';
 import React from 'react';
+import { useTitle } from 'q-hooks';
 
 export default () => {
   useTitle('自定义标题');

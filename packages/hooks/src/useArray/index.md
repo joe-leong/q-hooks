@@ -13,7 +13,7 @@ group: 状态
 ## API
 
 ```typescript
-const [state, { addItem, updateItem, deleteItem }] = useArray<T>(initialValue);
+const [state, { addItem, updateItem, deleteItem, reset }] = useArray<T>(initialValue);
 ```
 
 ### Result

@@ -1,5 +1,5 @@
 import React from 'react';
-import useArray from '..';
+import { useArray } from 'q-hooks';
 
 export default () => {
   const [state, { addItem, updateItem, deleteItem, reset }] = useArray<string | number>([1, '2']);
