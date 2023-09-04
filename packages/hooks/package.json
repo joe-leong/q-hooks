@@ -26,7 +26,8 @@
   "devDependencies": {
     "@alifd/next": "^1.20.6",
     "@ant-design/icons": "^5.2.6",
-    "@types/lodash-es": "^4.17.9"
+    "@types/lodash-es": "^4.17.9",
+    "mockjs": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"

@@ -24,6 +24,7 @@ import { configResponsive, useResponsive } from './useResponsive';
 import useLongPress from './useLongPress';
 import useKeyPress from './useKeyPress';
 import useRafState from './useRafState';
+import useUpdate from './useUpdate';
 
 export {
   useToggle,
@@ -53,4 +54,5 @@ export {
   useLongPress,
   useKeyPress,
   useRafState,
+  useUpdate,
 };

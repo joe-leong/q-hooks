@@ -29,7 +29,7 @@ export default defineConfig({
       },
     ],
     socialLinks: {
-      github: 'https://joe-leong.github.io/q-hooks',
+      github: 'https://github.com/joe-leong/q-hooks',
     },
     footer: `Copyright (c) © ${new Date().getFullYear()} by joe, All Rights Reserved`,
   },
