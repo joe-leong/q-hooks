@@ -21,6 +21,9 @@ import useEventListener from './useEventListener';
 import useHover from './useHover';
 import useInViewport from './useInViewport';
 import { configResponsive, useResponsive } from './useResponsive';
+import useLongPress from './useLongPress';
+import useKeyPress from './useKeyPress';
+import useRafState from './useRafState';
 
 export {
   useToggle,
@@ -47,4 +50,7 @@ export {
   useInViewport,
   configResponsive,
   useResponsive,
+  useLongPress,
+  useKeyPress,
+  useRafState,
 };

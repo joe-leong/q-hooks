@@ -141,6 +141,9 @@ importers:
       '@alifd/next':
         specifier: ^1.20.6
         version: 1.20.6(moment@2.29.4)(react-dom@16.14.0)(react@18.2.0)
+      '@ant-design/icons':
+        specifier: ^5.2.6
+        version: 5.2.6(react-dom@16.14.0)(react@18.2.0)
       '@types/lodash-es':
         specifier: ^4.17.9
         version: 4.17.9
@@ -221,6 +224,22 @@ packages:
 
   /@ant-design/icons-svg@4.3.1:
     resolution: {integrity: sha512-4QBZg8ccyC6LPIRii7A0bZUk3+lEDCLnhB+FVsflGdcWPPmV+j3fire4AwwoqHV/BibgvBmR9ZIo4s867smv+g==}
+    dev: true
+
+  /@ant-design/icons@5.2.6(react-dom@16.14.0)(react@18.2.0):
+    resolution: {integrity: sha512-4wn0WShF43TrggskBJPRqCD0fcHbzTYjnaoskdiJrVHg86yxoZ8ZUqsXvyn4WUqehRiFKnaclOhqk9w4Ui2KVw==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      '@ant-design/colors': 7.0.0
+      '@ant-design/icons-svg': 4.3.1
+      '@babel/runtime': 7.22.11
+      classnames: 2.3.2
+      rc-util: 5.37.0(react-dom@16.14.0)(react@18.2.0)
+      react: 18.2.0
+      react-dom: 16.14.0(react@18.2.0)
     dev: true
 
   /@ant-design/icons@5.2.6(react-dom@18.2.0)(react@18.2.0):
@@ -1937,8 +1956,8 @@ packages:
       '@commitlint/types': 17.4.4
       '@types/node': 20.4.7
       chalk: 4.1.2
-      cosmiconfig: 8.3.0(typescript@5.2.2)
-      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.0)(ts-node@10.9.1)(typescript@5.2.2)
+      cosmiconfig: 8.3.2(typescript@5.2.2)
+      cosmiconfig-typescript-loader: 4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.2)(ts-node@10.9.1)(typescript@5.2.2)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -6441,7 +6460,7 @@ packages:
       vary: 1.1.2
     dev: true
 
-  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.0)(ts-node@10.9.1)(typescript@5.2.2):
+  /cosmiconfig-typescript-loader@4.4.0(@types/node@20.4.7)(cosmiconfig@8.3.2)(ts-node@10.9.1)(typescript@5.2.2):
     resolution: {integrity: sha512-BabizFdC3wBHhbI4kJh0VkQP9GkBfoHPydD0COMce1nJ1kJAB3F2TmJ/I7diULBKtmEWSwEbuN/KDtgnmUUVmw==}
     engines: {node: '>=v14.21.3'}
     peerDependencies:
@@ -6451,7 +6470,7 @@ packages:
       typescript: '>=4'
     dependencies:
       '@types/node': 20.4.7
-      cosmiconfig: 8.3.0(typescript@5.2.2)
+      cosmiconfig: 8.3.2(typescript@5.2.2)
       ts-node: 10.9.1(@types/node@20.5.7)(typescript@5.2.2)
       typescript: 5.2.2
     dev: true
@@ -6467,8 +6486,8 @@ packages:
       yaml: 1.10.2
     dev: true
 
-  /cosmiconfig@8.3.0(typescript@5.2.2):
-    resolution: {integrity: sha512-kLfJx14+dZY3x65/LrdDXNt8r7VkoARRofiMgZhZ9qoKtJsGTjBKrbSBPwtxfNF9oWr7HC9x228/GYrwCnZLrQ==}
+  /cosmiconfig@8.3.2(typescript@5.2.2):
+    resolution: {integrity: sha512-/PvU3MjSLVKJMRHsL6GW+wHQ9RaJuMW6fnn56sXNy+kP1L8nI/SHk9F9giIA+dnfzjKNJAulRjOR/fi9kzGuNA==}
     engines: {node: '>=18'}
     peerDependencies:
       typescript: '>=4.9.5'
@@ -14882,6 +14901,18 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
+  /rc-util@5.37.0(react-dom@16.14.0)(react@18.2.0):
+    resolution: {integrity: sha512-cPMV8DzaHI1KDaS7XPRXAf4J7mtBqjvjikLpQieaeOO7+cEbqY2j7Kso/T0R0OiEZTNcLS/8Zl9YrlXiO9UbjQ==}
+    peerDependencies:
+      react: '>=16.9.0'
+      react-dom: '>=16.9.0'
+    dependencies:
+      '@babel/runtime': 7.22.11
+      react: 18.2.0
+      react-dom: 16.14.0(react@18.2.0)
+      react-is: 16.13.1
+    dev: true
+
   /rc-util@5.37.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-cPMV8DzaHI1KDaS7XPRXAf4J7mtBqjvjikLpQieaeOO7+cEbqY2j7Kso/T0R0OiEZTNcLS/8Zl9YrlXiO9UbjQ==}
     peerDependencies:
@@ -16683,7 +16714,7 @@ packages:
       '@csstools/selector-specificity': 3.0.0(postcss-selector-parser@6.0.13)
       balanced-match: 2.0.0
       colord: 2.9.3
-      cosmiconfig: 8.3.0(typescript@5.2.2)
+      cosmiconfig: 8.3.2(typescript@5.2.2)
       css-functions-list: 3.2.0
       css-tree: 2.3.1
       debug: 4.3.4

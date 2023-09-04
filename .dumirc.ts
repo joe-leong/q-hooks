@@ -25,9 +25,12 @@ export default defineConfig({
       },
       {
         title: 'Hooks',
-        link: '/hooks/use-boolean',
+        link: '/hooks/use-mount',
       },
     ],
+    socialLinks: {
+      github: 'https://joe-leong.github.io/q-hooks',
+    },
     footer: `Copyright (c) © ${new Date().getFullYear()} by joe, All Rights Reserved`,
   },
   resolve: {

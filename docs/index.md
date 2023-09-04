@@ -6,7 +6,7 @@ hero:
     - text: 指南
       link: /guide
     - text: Hooks 列表
-      link: /hooks
+      link: /hooks/use-mount
 ---
 
 ## ✨ 特性
