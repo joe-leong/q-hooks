@@ -26,6 +26,7 @@ import useKeyPress from './useKeyPress';
 import useRafState from './useRafState';
 import useUpdate from './useUpdate';
 import useUpdateEffect from './useUpdateEffect';
+import useArray from './useArray';
 
 export {
   useToggle,
@@ -57,4 +58,5 @@ export {
   useRafState,
   useUpdate,
   useUpdateEffect,
+  useArray,
 };
