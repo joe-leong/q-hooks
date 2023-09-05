@@ -43,7 +43,6 @@ export default class Fetch<TData, TParams extends any[]> {
   async runAsync(...params: TParams): Promise<TData> {
     this.count += 1;
     const currentCount = this.count;
-
     const {
       stopNow = false,
       returnNow = false,
