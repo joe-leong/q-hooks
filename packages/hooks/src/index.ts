@@ -27,6 +27,8 @@ import useRafState from './useRafState';
 import useUpdate from './useUpdate';
 import useUpdateEffect from './useUpdateEffect';
 import useArray from './useArray';
+import useCreation from './useCreation';
+import useRequest from './useRequest';
 
 export {
   useToggle,
@@ -59,4 +61,6 @@ export {
   useUpdate,
   useUpdateEffect,
   useArray,
+  useCreation,
+  useRequest,
 };

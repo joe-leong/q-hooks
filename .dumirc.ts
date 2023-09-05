@@ -35,7 +35,10 @@ export default defineConfig({
   },
   resolve: {
     docDirs: ['docs'],
-    atomDirs: [{ type: 'hook', dir: 'packages/hooks/src' }],
+    atomDirs: [
+      { type: 'hook', dir: 'packages/hooks/src' },
+      { type: 'hook', dir: 'packages/hooks/src/useRequest/doc' },
+    ],
   },
   alias: {
     qHooks: process.cwd() + '/packages/hooks/src/index.ts',
@@ -52,3 +55,7 @@ export default defineConfig({
     ],
   ],
 });
+
+export function onRouteChange() {
+  console.log(123);
+}
