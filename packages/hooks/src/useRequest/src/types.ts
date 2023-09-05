@@ -103,8 +103,8 @@ export interface Result<TData, TParams extends any[]> {
   error?: Error;
   params: TParams | [];
   cancel: Fetch<TData, TParams>['cancel'];
-  // refresh: Fetch<TData, TParams>['refresh'];
-  // refreshAsync: Fetch<TData, TParams>['refreshAsync'];
+  refresh: Fetch<TData, TParams>['refresh'];
+  refreshAsync: Fetch<TData, TParams>['refreshAsync'];
   run: Fetch<TData, TParams>['run'];
   runAsync: Fetch<TData, TParams>['runAsync'];
   // mutate: Fetch<TData, TParams>['mutate'];

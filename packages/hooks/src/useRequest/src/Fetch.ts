@@ -132,4 +132,14 @@ export default class Fetch<TData, TParams extends any[]> {
 
     this.runPluginHandler('onCancel');
   }
+
+  refresh() {
+    // @ts-ignore
+    this.run(...(this.state.params || []));
+  }
+
+  refreshAsync() {
+    // @ts-ignore
+    return this.runAsync(...(this.state.params || []));
+  }
 }

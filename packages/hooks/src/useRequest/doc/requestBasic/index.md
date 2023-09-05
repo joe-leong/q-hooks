@@ -77,6 +77,26 @@ const { loading, run, runAsync } = useRequest(service, {
 
 <code src="./demo/cancel.tsx"></code>
 
+## 刷新（重复上一次请求）
+
+`useRequest` 提供了 `refresh` 和 `refreshAsync` 方法，使我们可以使用上一次的参数，重新发起请求。
+
+假如在读取用户信息的场景中
+
+1. 我们读取了 ID 为 1 的用户信息 `run(1)`
+2. 我们通过某种手段更新了用户信息
+3. 我们想重新发起上一次的请求，那我们就可以使用 `refresh` 来代替 `run(1)`，这在复杂参数的场景中是非常有用的
+
+<code src="./demo/refresh.tsx"></code>
+
+## 参数管理
+
+`useRequest` 返回的 `params` 会记录当次调用 `service` 的参数数组。比如你触发了 `run(1, 2, 3)`，则 `params` 等于 `[1, 2, 3]` 。
+
+如果我们设置了 `options.manual = false`，则首次调用 `service` 的参数可以通过 `options.defaultParams` 来设置。
+
+<code src="./demo/params.tsx"></code>
+
 ## API
 
 ```ts
@@ -88,6 +108,8 @@ const {
   run: (...params: TParams) => void,
   runAsync: (...params: TParams) => Promise<TData>,
   cancel: () => void,
+  refresh: () => void,
+  refreshAsync: () => Promise<TData>,
 } = useRequest<TData, TParams>(
   service: (...args: TParams) => Promise<TData>,
   {
@@ -103,15 +125,17 @@ const {
 
 ### Result
 
-| 参数     | 说明                                                                                                     | 类型                                     |
-| -------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| data     | service 返回的数据                                                                                       | `TData` \| `undefined`                   |
-| error    | service 抛出的异常                                                                                       | `Error` \| `undefined`                   |
-| loading  | service 是否正在执行                                                                                     | `boolean`                                |
-| params   | 当次执行的 service 的参数数组。比如你触发了 `run(1, 2, 3)`，则 params 等于 `[1, 2, 3]`                   | `TParams` \| `[]`                        |
-| run      | <ul><li> 手动触发 service 执行，参数会传递给 service</li><li>异常自动处理，通过 `onError` 反馈</li></ul> | `(...params: TParams) => void`           |
-| runAsync | 与 `run` 用法一致，但返回的是 Promise，需要自行处理异常。                                                | `(...params: TParams) => Promise<TData>` |
-| cancel   | 忽略当前 Promise 的响应                                                                                  | `() => void`                             |
+| 参数         | 说明                                                                                                     | 类型                                     |
+| ------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| data         | service 返回的数据                                                                                       | `TData` \| `undefined`                   |
+| error        | service 抛出的异常                                                                                       | `Error` \| `undefined`                   |
+| loading      | service 是否正在执行                                                                                     | `boolean`                                |
+| params       | 当次执行的 service 的参数数组。比如你触发了 `run(1, 2, 3)`，则 params 等于 `[1, 2, 3]`                   | `TParams` \| `[]`                        |
+| run          | <ul><li> 手动触发 service 执行，参数会传递给 service</li><li>异常自动处理，通过 `onError` 反馈</li></ul> | `(...params: TParams) => void`           |
+| runAsync     | 与 `run` 用法一致，但返回的是 Promise，需要自行处理异常。                                                | `(...params: TParams) => Promise<TData>` |
+| cancel       | 忽略当前 Promise 的响应                                                                                  | `() => void`                             |
+| refresh      | 使用上一次的 params，重新调用 `run`                                                                      | `() => void`                             |
+| refreshAsync | 使用上一次的 params，重新调用 `runAsync`                                                                 | `() => Promise<TData>`                   |
 
 ### Options
 
