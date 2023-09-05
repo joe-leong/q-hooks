@@ -63,3 +63,63 @@ const { loading, run, runAsync } = useRequest(service, {
 - `onFinally`：请求完成触发
 
 <code src="./demo/lifeCycle.tsx"></code>
+
+## 取消响应
+
+`useRequest` 提供了 `cancel` 函数，用于**忽略**当前 promise 返回的数据和错误
+
+**注意：调用 `cancel` 函数并不会取消 promise 的执行**
+
+同时 `useRequest` 会在以下时机自动忽略响应：
+
+- 组件卸载时，正在进行的 promise
+- 竞态取消，当上一次 promise 还没返回时，又发起了下一次 promise，则会忽略上一次 promise 的响应
+
+<code src="./demo/cancel.tsx"></code>
+
+## API
+
+```ts
+const {
+  loading: boolean,
+  data?: TData,
+  error?: Error,
+  params: TParams || [],
+  run: (...params: TParams) => void,
+  runAsync: (...params: TParams) => Promise<TData>,
+  cancel: () => void,
+} = useRequest<TData, TParams>(
+  service: (...args: TParams) => Promise<TData>,
+  {
+    manual?: boolean,
+    defaultParams?: TParams,
+    onBefore?: (params: TParams) => void,
+    onSuccess?: (data: TData, params: TParams) => void,
+    onError?: (e: Error, params: TParams) => void,
+    onFinally?: (params: TParams, data?: TData, e?: Error) => void,
+  }
+);
+```
+
+### Result
+
+| 参数     | 说明                                                                                                     | 类型                                     |
+| -------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| data     | service 返回的数据                                                                                       | `TData` \| `undefined`                   |
+| error    | service 抛出的异常                                                                                       | `Error` \| `undefined`                   |
+| loading  | service 是否正在执行                                                                                     | `boolean`                                |
+| params   | 当次执行的 service 的参数数组。比如你触发了 `run(1, 2, 3)`，则 params 等于 `[1, 2, 3]`                   | `TParams` \| `[]`                        |
+| run      | <ul><li> 手动触发 service 执行，参数会传递给 service</li><li>异常自动处理，通过 `onError` 反馈</li></ul> | `(...params: TParams) => void`           |
+| runAsync | 与 `run` 用法一致，但返回的是 Promise，需要自行处理异常。                                                | `(...params: TParams) => Promise<TData>` |
+| cancel   | 忽略当前 Promise 的响应                                                                                  | `() => void`                             |
+
+### Options
+
+| 参数          | 说明                                                                                                                                       | 类型                                                 | 默认值  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------- |
+| manual        | <ul><li> 默认 `false`。 即在初始化时自动执行 service。</li><li>如果设置为 `true`，则需要手动调用 `run` 或 `runAsync` 触发执行。 </li></ul> | `boolean`                                            | `false` |
+| defaultParams | 首次默认执行时，传递给 service 的参数                                                                                                      | `TParams`                                            | -       |
+| onBefore      | service 执行前触发                                                                                                                         | `(params: TParams) => void`                          | -       |
+| onSuccess     | service resolve 时触发                                                                                                                     | `(data: TData, params: TParams) => void`             | -       |
+| onError       | service reject 时触发                                                                                                                      | `(e: Error, params: TParams) => void`                | -       |
+| onFinally     | service 执行完成时触发                                                                                                                     | `(params: TParams, data?: TData, e?: Error) => void` | -       |

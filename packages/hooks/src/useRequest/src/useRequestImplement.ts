@@ -1,7 +1,7 @@
 import useUpdate from '../../useUpdate';
 import useLatest from '../../useLatest';
 import isDev from '../../utils/isDev';
-import type { Options, Service, Plugin } from './types';
+import type { Options, Service, Plugin, Result } from './types';
 import useCreation from '../../useCreation';
 import Fetch from './Fetch';
 import useMount from '../../useMount';
