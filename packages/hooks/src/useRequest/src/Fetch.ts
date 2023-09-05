@@ -1,5 +1,6 @@
 import type { MutableRefObject } from 'react';
 import type { FetchState, Options, PluginReturn, Service, Subscribe } from './types';
+import { isFunction } from '../../utils';
 
 export default class Fetch<TData, TParams extends any[]> {
   pluginImpls: PluginReturn<TData, TParams>[];
@@ -141,5 +142,13 @@ export default class Fetch<TData, TParams extends any[]> {
   refreshAsync() {
     // @ts-ignore
     return this.runAsync(...(this.state.params || []));
+  }
+
+  mutate(data?: TData | ((oldData?: TData) => TData | undefined)) {
+    const targetData = isFunction(data) ? data(this.state.data) : data;
+    this.runPluginHandler('onMutate', targetData);
+    this.setState({
+      data: targetData,
+    });
   }
 }

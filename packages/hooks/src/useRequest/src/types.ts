@@ -107,5 +107,5 @@ export interface Result<TData, TParams extends any[]> {
   refreshAsync: Fetch<TData, TParams>['refreshAsync'];
   run: Fetch<TData, TParams>['run'];
   runAsync: Fetch<TData, TParams>['runAsync'];
-  // mutate: Fetch<TData, TParams>['mutate'];
+  mutate: Fetch<TData, TParams>['mutate'];
 }

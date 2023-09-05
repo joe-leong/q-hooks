@@ -97,6 +97,18 @@ const { loading, run, runAsync } = useRequest(service, {
 
 <code src="./demo/params.tsx"></code>
 
+## 立即变更数据
+
+`useRequest` 提供了 `mutate`, 支持立即修改 `useRequest` 返回的 `data` 参数。
+
+`mutate` 的用法与 `React.setState` 一致，支持 `mutate(newData)` 和 `mutate((oldData) => newData)` 两种写法。
+
+下面的示例，我们演示了一种 `mutate` 的应用场景。
+
+我们修改了用户名，但是我们不希望等编辑接口调用成功之后，才给用户反馈。而是直接修改页面数据，同时在背后去调用修改接口，等修改接口返回之后，另外提供反馈。
+
+<code src="./demo/mutate.tsx"></code>
+
 ## API
 
 ```ts
@@ -110,6 +122,7 @@ const {
   cancel: () => void,
   refresh: () => void,
   refreshAsync: () => Promise<TData>,
+  mutate: (data?: TData | ((oldData?: TData) => (TData | undefined))) => void,
 } = useRequest<TData, TParams>(
   service: (...args: TParams) => Promise<TData>,
   {
@@ -125,17 +138,18 @@ const {
 
 ### Result
 
-| 参数         | 说明                                                                                                     | 类型                                     |
-| ------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| data         | service 返回的数据                                                                                       | `TData` \| `undefined`                   |
-| error        | service 抛出的异常                                                                                       | `Error` \| `undefined`                   |
-| loading      | service 是否正在执行                                                                                     | `boolean`                                |
-| params       | 当次执行的 service 的参数数组。比如你触发了 `run(1, 2, 3)`，则 params 等于 `[1, 2, 3]`                   | `TParams` \| `[]`                        |
-| run          | <ul><li> 手动触发 service 执行，参数会传递给 service</li><li>异常自动处理，通过 `onError` 反馈</li></ul> | `(...params: TParams) => void`           |
-| runAsync     | 与 `run` 用法一致，但返回的是 Promise，需要自行处理异常。                                                | `(...params: TParams) => Promise<TData>` |
-| cancel       | 忽略当前 Promise 的响应                                                                                  | `() => void`                             |
-| refresh      | 使用上一次的 params，重新调用 `run`                                                                      | `() => void`                             |
-| refreshAsync | 使用上一次的 params，重新调用 `runAsync`                                                                 | `() => Promise<TData>`                   |
+| 参数         | 说明                                                                                                     | 类型                                                                    |
+| ------------ | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| data         | service 返回的数据                                                                                       | `TData` \| `undefined`                                                  |
+| error        | service 抛出的异常                                                                                       | `Error` \| `undefined`                                                  |
+| loading      | service 是否正在执行                                                                                     | `boolean`                                                               |
+| params       | 当次执行的 service 的参数数组。比如你触发了 `run(1, 2, 3)`，则 params 等于 `[1, 2, 3]`                   | `TParams` \| `[]`                                                       |
+| run          | <ul><li> 手动触发 service 执行，参数会传递给 service</li><li>异常自动处理，通过 `onError` 反馈</li></ul> | `(...params: TParams) => void`                                          |
+| runAsync     | 与 `run` 用法一致，但返回的是 Promise，需要自行处理异常。                                                | `(...params: TParams) => Promise<TData>`                                |
+| cancel       | 忽略当前 Promise 的响应                                                                                  | `() => void`                                                            |
+| refresh      | 使用上一次的 params，重新调用 `run`                                                                      | `() => void`                                                            |
+| refreshAsync | 使用上一次的 params，重新调用 `runAsync`                                                                 | `() => Promise<TData>`                                                  |
+| mutate       | 直接修改 `data`                                                                                          | `(data?: TData \| ((oldData?: TData) => (TData \| undefined))) => void` |
 
 ### Options
 

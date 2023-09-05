@@ -69,6 +69,6 @@ export default function useRequestImplement<TData, TParams extends any[]>(
     refreshAsync: useMemoizedFn(fetchInstance.refreshAsync.bind(fetchInstance)),
     run: useMemoizedFn(fetchInstance.run.bind(fetchInstance)),
     runAsync: useMemoizedFn(fetchInstance.runAsync.bind(fetchInstance)),
-    // mutate: useMemoizedFn(fetchInstance.mutate.bind(fetchInstance)),
+    mutate: useMemoizedFn(fetchInstance.mutate.bind(fetchInstance)),
   } as Result<TData, TParams>;
 }
