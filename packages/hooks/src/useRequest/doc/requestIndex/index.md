@@ -1,6 +1,7 @@
 ---
-nav: haha
-group: 请求
+group:
+  title: 请求
+  order: 5
 ---
 
 # 快速上手

@@ -55,7 +55,3 @@ export default defineConfig({
     ],
   ],
 });
-
-export function onRouteChange() {
-  console.log(123);
-}
