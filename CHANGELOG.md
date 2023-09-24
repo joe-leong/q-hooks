@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.9](https://github.com/joe-leong/q-hooks/compare/v0.0.8...v0.0.9) (2023-09-24)
+
+
+### Features
+
+* update gulp ([486617b](https://github.com/joe-leong/q-hooks/commit/486617b0e794e8ca1fe861953119f7ae934f2d2f))
+
 ## [0.0.8](https://github.com/joe-leong/q-hooks/compare/v0.0.7...v0.0.8) (2023-09-24)
 
 
