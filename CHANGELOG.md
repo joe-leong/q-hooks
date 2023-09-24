@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.5](https://github.com/joe-leong/q-hooks/compare/v0.0.4...v0.0.5) (2023-09-24)
+
+
+### Bug Fixes
+
+* npm permissions ([3587ec6](https://github.com/joe-leong/q-hooks/commit/3587ec67ac160c6efee47e8c90110b366b17e27f))
+
 ## [0.0.4](https://github.com/joe-leong/q-hooks/compare/v0.0.3...v0.0.4) (2023-09-24)
 
 
