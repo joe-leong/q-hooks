@@ -4,9 +4,9 @@ const ts = require('gulp-typescript');
 const del = require('del');
 
 gulp.task('clean', async function () {
-  await del('lib/**');
-  await del('es/**');
-  await del('dist/**');
+  await del('**/lib/**/*');
+  await del('**/es/**/*');
+  await del('**/dist/**/*');
 });
 
 gulp.task('es', function () {

@@ -1,7 +1,7 @@
 {
   "name": "q-hooks",
   "description": "React 业务 Hooks",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -16,8 +16,7 @@
     "test": "jest",
     "q-lint-scan": "q-lint scan",
     "q-lint-fix": "q-lint fix",
-    "release": "standard-version && git push && git push --follow-tags",
-    "release:test": "standard-version",
+    "release": "commit-and-tag-version && git push && git push --follow-tags",
     "update:version": "tsx scripts/update-version.ts"
   },
   "keywords": [
@@ -42,6 +41,7 @@
     "antd": "^5.8.5",
     "babel-plugin-import": "^1.13.8",
     "chalk": "^5.3.0",
+    "commit-and-tag-version": "^11.2.3",
     "consola": "^3.2.3",
     "del": "^5.1.0",
     "dumi": "^2.2.7",
@@ -63,7 +63,6 @@
     "react-shadow": "^20.4.0",
     "rimraf": "^3.0.2",
     "semver": "^7.5.4",
-    "standard-version": "^9.5.0",
     "ts-jest": "^29.0.5",
     "tslib": "^2.4.1",
     "tsx": "^3.12.10",
