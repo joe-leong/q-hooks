@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.2](https://github.com/joe-leong/q-hooks/compare/v0.0.1...v0.0.2) (2023-09-24)
+
+
+### Bug Fixes
+
+* hooks name ([cdcfd0a](https://github.com/joe-leong/q-hooks/commit/cdcfd0a0a07c1d66a53fdabf5ad1e5688e54c998))
+
 ## 0.0.1 (2023-09-24)
 
 
