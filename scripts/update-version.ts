@@ -25,7 +25,7 @@ async function main() {
     (await getWorkspacePackages()).map((pkg) => [pkg.manifest.name, pkg]),
   );
 
-  const qHooks = pkgs['q-hooks'];
+  const qHooks = pkgs['@fe-q/q-hooks'];
 
   const writeVersion = async (project: Project) => {
     await project.writeProjectManifest({
