@@ -14,12 +14,10 @@
     "hooks"
   ],
   "files": [
-    "dist",
-    "lib",
-    "es",
-    "metadata.json",
-    "package.json",
-    "README.md"
+    "dist/",
+    "lib/",
+    "es/",
+    "metadata.json"
   ],
   "author": "joe",
   "license": "ISC",
