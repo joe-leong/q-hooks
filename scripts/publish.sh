@@ -5,7 +5,7 @@ set -e
 pnpm i --frozen-lockfile
 pnpm update:version
 
-cd packages/q-hooks
+cd packages/hooks
 npm publish
 cd -
 
