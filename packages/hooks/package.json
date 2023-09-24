@@ -13,12 +13,6 @@
     "react",
     "hooks"
   ],
-  "files": [
-    "dist/",
-    "lib/",
-    "es/",
-    "metadata.json"
-  ],
   "author": "joe",
   "license": "ISC",
   "devDependencies": {
