@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useCookieState } from 'q-hooks';
+import { useCookieState } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [message, setMessage] = useCookieState('useCookieStateString');

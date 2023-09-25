@@ -7,7 +7,7 @@
  */
 
 import React, { useState, useRef } from 'react';
-import { useKeyPress } from 'q-hooks';
+import { useKeyPress } from '@fe-q/q-react-hooks';
 
 export default () => {
   const inputRef = useRef(null);

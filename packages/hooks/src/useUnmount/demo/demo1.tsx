@@ -3,7 +3,7 @@
  * desc: 在组件卸载时，执行函数。
  */
 
-import { useBoolean, useUnmount } from 'q-hooks';
+import { useBoolean, useUnmount } from '@fe-q/q-react-hooks';
 import { message } from 'antd';
 import React from 'react';
 

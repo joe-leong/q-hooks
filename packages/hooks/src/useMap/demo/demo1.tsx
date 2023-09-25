@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMap } from 'q-hooks';
+import { useMap } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [map, { set, setAll, remove, reset, get }] = useMap<string | number, string>([

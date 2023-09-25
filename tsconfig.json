@@ -11,10 +11,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "qHooks": ["./packages/hooks/src/index.ts"],
-      "q-hooks": ["./packages/hooks/src/index.ts"],
-      "qHooks/lib/*": ["./packages/hooks/src/*"],
-      "q-hooks/lib/*": ["./packages/hooks/src/*"]
+      "@fe-q/q-react-hooks": ["./packages/hooks/src/index.ts"],
+      "@fe-q/q-react-hooks/lib/*": ["./packages/hooks/src/*"]
     },
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,

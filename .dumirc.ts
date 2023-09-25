@@ -41,8 +41,7 @@ export default defineConfig({
     ],
   },
   alias: {
-    qHooks: process.cwd() + '/packages/hooks/src/index.ts',
-    ['q-hooks']: process.cwd() + '/packages/hooks/src/index.ts',
+    ['@fe-q/q-react-hooks']: process.cwd() + '/packages/hooks/src/index.ts',
   },
   extraBabelPlugins: [
     [

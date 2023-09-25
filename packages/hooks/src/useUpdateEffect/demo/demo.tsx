@@ -4,7 +4,7 @@
  */
 
 import React, { useEffect, useState } from 'react';
-import { useUpdateEffect } from 'q-hooks';
+import { useUpdateEffect } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [count, setCount] = useState(0);

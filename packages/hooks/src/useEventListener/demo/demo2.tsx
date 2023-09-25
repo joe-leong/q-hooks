@@ -5,7 +5,7 @@
  */
 
 import React, { useState } from 'react';
-import { useEventListener } from 'q-hooks';
+import { useEventListener } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [value, setValue] = useState('');

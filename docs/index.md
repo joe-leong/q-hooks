@@ -18,9 +18,9 @@ hero:
 ## 📦 安装
 
 ```bash
-$ pnpm install --save q-hooks
+$ pnpm install --save @fe-q/q-react-hooks
 # or
-$ yarn add q-hooks
+$ yarn add @fe-q/q-react-hooks
 ```
 
 ## 🔨 使用
@@ -28,5 +28,5 @@ $ yarn add q-hooks
 参考 `Hooks`内容，使用如下：
 
 ```ts
-import { useToggle } from 'q-hooks';
+import { useToggle } from '@fe-q/q-react-hooks';
 ```

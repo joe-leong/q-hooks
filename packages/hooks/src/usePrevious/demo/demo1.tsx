@@ -3,7 +3,7 @@
  * desc: 记录上次的 count 值
  */
 
-import { usePrevious } from 'q-hooks';
+import { usePrevious } from '@fe-q/q-react-hooks';
 import React, { useState } from 'react';
 
 export default () => {

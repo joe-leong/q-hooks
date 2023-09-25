@@ -3,7 +3,7 @@
  * desc: 在这个例子中，我们尝试修改用户名。
  */
 
-import { useRequest } from 'q-hooks';
+import { useRequest } from '@fe-q/q-react-hooks';
 import { message } from 'antd';
 import React, { useState } from 'react';
 

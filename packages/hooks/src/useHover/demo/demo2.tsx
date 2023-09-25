@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useHover } from 'q-hooks';
+import { useHover } from '@fe-q/q-react-hooks';
 
 export default () => {
   const isHovering = useHover(() => document.getElementById('hover-div'), {

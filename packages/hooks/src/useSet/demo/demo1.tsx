@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSet } from 'q-hooks';
+import { useSet } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [state, { add, remove, reset }] = useSet(['Hello']);

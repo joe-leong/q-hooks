@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { configResponsive, useResponsive } from 'q-hooks';
+import { configResponsive, useResponsive } from '@fe-q/q-react-hooks';
 
 configResponsive({
   small: 0,

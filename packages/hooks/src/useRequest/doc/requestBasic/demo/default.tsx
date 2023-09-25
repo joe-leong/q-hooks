@@ -2,7 +2,7 @@
  * title: 读取用户名称
  */
 
-import { useRequest } from 'q-hooks';
+import { useRequest } from '@fe-q/q-react-hooks';
 import Mock from 'mockjs';
 import React from 'react';
 

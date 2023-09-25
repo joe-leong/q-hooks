@@ -4,7 +4,7 @@
  */
 
 import { CheckOutlined } from '@ant-design/icons';
-import { useKeyPress } from 'q-hooks';
+import { useKeyPress } from '@fe-q/q-react-hooks';
 import React, { useState } from 'react';
 
 export default () => {

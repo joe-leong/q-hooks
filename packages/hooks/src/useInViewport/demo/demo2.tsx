@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useInViewport } from 'q-hooks';
+import { useInViewport } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [inViewport, ratio] = useInViewport(() => document.getElementById('children'), {

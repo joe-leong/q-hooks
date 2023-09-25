@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useUpdate } from 'q-hooks';
+import { useUpdate } from '@fe-q/q-react-hooks';
 
 export default () => {
   const update = useUpdate();

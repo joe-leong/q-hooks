@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { useDebounce } from 'qHooks';
+import { useDebounce } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [value, setValue] = useState<string>('');

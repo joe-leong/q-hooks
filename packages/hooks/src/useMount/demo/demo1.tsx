@@ -3,7 +3,7 @@
  * desc: 在组件首次渲染时，执行方法。
  */
 
-import { useMount, useBoolean } from 'qHooks';
+import { useMount, useBoolean } from '@fe-q/q-react-hooks';
 import { message } from 'antd';
 import React from 'react';
 

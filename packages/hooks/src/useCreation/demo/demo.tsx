@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { useCreation } from 'q-hooks';
+import { useCreation } from '@fe-q/q-react-hooks';
 
 class Foo {
   constructor() {

@@ -1,4 +1,4 @@
-import { useSafeState } from 'q-hooks';
+import { useSafeState } from '@fe-q/q-react-hooks';
 import React, { useEffect, useState } from 'react';
 
 const Child = () => {

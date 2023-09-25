@@ -1,5 +1,5 @@
 {
-  "name": "@fe-q/q-hooks",
+  "name": "@fe-q/q-react-hooks",
   "version": "0.0.0",
   "description": "React 业务 Hooks",
   "main": "./lib/index.js",

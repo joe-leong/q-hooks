@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { usePrevious } from 'q-hooks';
+import { usePrevious } from '@fe-q/q-react-hooks';
 
 interface Person {
   name: string;

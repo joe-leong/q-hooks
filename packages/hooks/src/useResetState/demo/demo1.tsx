@@ -1,5 +1,5 @@
 import React from 'react';
-import { useResetState } from 'q-hooks';
+import { useResetState } from '@fe-q/q-react-hooks';
 
 interface State {
   hello: string;

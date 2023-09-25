@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = merge(common, {
   entry: './es/index.js',
   output: {
-    filename: 'qHooks.js',
-    library: 'qHooks',
+    filename: '@fe-q/q-react-hooks.js',
+    library: '@fe-q/q-react-hooks',
     path: path.resolve(__dirname, './dist'),
   },
 });

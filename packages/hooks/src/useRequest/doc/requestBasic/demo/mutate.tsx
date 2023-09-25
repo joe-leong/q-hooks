@@ -4,7 +4,7 @@
 
 import { message } from 'antd';
 import React, { useState, useRef } from 'react';
-import { useRequest } from 'q-hooks';
+import { useRequest } from '@fe-q/q-react-hooks';
 import Mock from 'mockjs';
 
 function getUsername(): Promise<string> {

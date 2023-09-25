@@ -4,7 +4,7 @@
  */
 
 import React, { useEffect } from 'react';
-import { useGetState } from 'q-hooks';
+import { useGetState } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [count, { setState, getState }] = useGetState<number>(0);

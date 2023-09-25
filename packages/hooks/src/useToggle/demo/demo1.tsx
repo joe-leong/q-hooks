@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useToggle } from 'qHooks';
+import { useToggle } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [state, { toggle, setLeft, setRight }] = useToggle();

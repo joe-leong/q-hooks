@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { useLongPress } from 'q-hooks';
+import { useLongPress } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [pressCounter, setPressCounter] = useState(0);

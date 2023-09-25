@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { useKeyPress } from 'q-hooks';
+import { useKeyPress } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [count, setCount] = useState<number>(0);

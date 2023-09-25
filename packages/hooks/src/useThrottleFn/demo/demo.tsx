@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { useThrottleFn } from 'q-hooks';
+import { useThrottleFn } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [value, setValue] = useState(0);

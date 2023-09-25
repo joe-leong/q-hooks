@@ -5,7 +5,7 @@
 
 import React, { useState, useCallback } from 'react';
 import { message } from 'antd';
-import { useMemoizedFn } from 'qHooks';
+import { useMemoizedFn } from '@fe-q/q-react-hooks';
 
 export default () => {
   const [count, setCount] = useState(0);

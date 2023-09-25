@@ -4,7 +4,7 @@
  */
 
 import React, { useRef } from 'react';
-import { useHover } from 'q-hooks';
+import { useHover } from '@fe-q/q-react-hooks';
 
 export default () => {
   const ref = useRef(null);

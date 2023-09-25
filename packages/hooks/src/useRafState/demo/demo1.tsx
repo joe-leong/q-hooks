@@ -2,7 +2,7 @@
  * title: 基础用法
  */
 
-import { useRafState } from 'q-hooks';
+import { useRafState } from '@fe-q/q-react-hooks';
 import React, { useEffect } from 'react';
 
 export default () => {
