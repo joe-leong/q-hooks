@@ -4,9 +4,9 @@ const ts = require('gulp-typescript');
 const del = require('del');
 
 gulp.task('clean', async function () {
-  await del('lib/**');
-  await del('es/**');
-  await del('dist/**');
+  await del('**/lib/**/*');
+  await del('**/es/**/*');
+  await del('**/dist/**/*');
 });
 
 gulp.task('es', function () {
@@ -37,4 +37,13 @@ gulp.task('declaration', function () {
   return tsProject.src().pipe(tsProject()).pipe(gulp.dest('es/')).pipe(gulp.dest('lib/'));
 });
 
-exports.default = gulp.series('clean', 'es', 'cjs', 'copyReadme', 'declaration');
+gulp.task('copyNpmIgnore', async function () {
+  await gulp.src('../../.npmignore').pipe(gulp.dest('../../packages/hooks'));
+});
+
+exports.default = gulp.series(
+  'clean',
+  'es',
+  'cjs',
+  gulp.parallel('copyReadme', 'declaration', 'copyNpmIgnore'),
+);
