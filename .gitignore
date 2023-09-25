@@ -20,6 +20,6 @@ yarn-error.log
 package-lock.json
 metadata.json
 .eslintcache
-**/README.md
-**/metadata.json
-**/.npmignore
+packages/**/README.md
+packages/**/metadata.json
+packages/**/.npmignore
