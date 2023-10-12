@@ -1,7 +1,7 @@
 {
   "name": "q-hooks",
   "description": "React 业务 Hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
