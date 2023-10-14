@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.8](https://github.com/joe-leong/q-hooks/compare/v0.0.7...v0.0.8) (2023-10-14)
+
+
+### Bug Fixes
+
+* update version before build doc ([0389800](https://github.com/joe-leong/q-hooks/commit/038980054c1ef87e6134b0832598e550e1dcf7d4))
+
 ## [0.0.7](https://github.com/joe-leong/q-hooks/compare/v0.0.6...v0.0.7) (2023-10-14)
 
 ## [0.0.6](https://github.com/joe-leong/q-hooks/compare/v0.0.5...v0.0.6) (2023-10-14)
