@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/joe-leong/q-hooks/compare/v0.0.5...v0.0.6) (2023-10-14)
+
+
+### Bug Fixes
+
+* npmignore for root src ([62201c5](https://github.com/joe-leong/q-hooks/commit/62201c5724eec479c8adf3bf5251de1136407ebb))
+
 ## [0.0.5](https://github.com/joe-leong/q-hooks/compare/v0.0.4...v0.0.5) (2023-10-14)
 
 
