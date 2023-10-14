@@ -5,7 +5,7 @@ import semver from 'semver';
 import type { Project } from '@pnpm/find-workspace-packages';
 
 async function main() {
-  const tagVersion = process.env.TAG_VERSION;
+  const tagVersion = process.env.TAG_VERSION || '0.0.0';
   const gitHead = process.env.GIT_HEAD;
   if (!tagVersion || !gitHead) {
     errorAndExit(
