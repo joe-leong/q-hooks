@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.4](https://github.com/joe-leong/q-hooks/compare/v0.0.3...v0.0.4) (2023-10-14)
+
+
+### Bug Fixes
+
+* gulpfile for gen cjs ([157c63f](https://github.com/joe-leong/q-hooks/commit/157c63fb06974959bdeb9cd72a85880f1c1ed0f4))
+
 ## [0.0.3](https://github.com/joe-leong/q-hooks/compare/v0.0.2...v0.0.3) (2023-10-12)
 
 
