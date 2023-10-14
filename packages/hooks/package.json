@@ -6,6 +6,13 @@
   "module": "./es/index.js",
   "types": "./lib/index.d.ts",
   "sideEffects": false,
+  "files": [
+    "/lib",
+    "/es",
+    "/dist",
+    "README.md",
+    "metadata.json"
+  ],
   "scripts": {
     "build": "gulp && webpack-cli"
   },

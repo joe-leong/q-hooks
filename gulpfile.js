@@ -45,5 +45,5 @@ exports.default = gulp.series(
   'clean',
   'es',
   'cjs',
-  gulp.parallel('copyReadme', 'declaration', 'copyNpmIgnore'),
+  gulp.parallel('copyReadme', 'declaration'),
 );
