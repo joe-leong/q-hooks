@@ -21,8 +21,8 @@ gulp.task('cjs', function () {
   return gulp.src(['./es/**/*.js']).pipe(
     babel({
       configFile: '../../.babelrc',
-    }).pipe(gulp.dest('lib/')),
-  );
+    })
+  ).pipe(gulp.dest('lib/'))
 });
 
 gulp.task('copyReadme', async function () {
