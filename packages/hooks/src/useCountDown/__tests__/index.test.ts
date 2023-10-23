@@ -237,5 +237,13 @@ describe('useCountDown', () => {
       leftTime: 8000,
     });
     expect(result.current[0]).toBe(8000);
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+    expect(result.current[0]).toBe(7000);
+    act(() => {
+      jest.advanceTimersByTime(1000);
+    });
+    expect(result.current[0]).toBe(6000);
   });
 });

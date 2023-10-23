@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
 import dayjs from 'dayjs';
 import useLatest from '../useLatest';
 import { isNumber } from 'lodash-es';
@@ -37,14 +37,17 @@ const parseMs = (milliseconds: number): FormattedRes => {
 };
 
 const useCountDown = (options: Options) => {
-  const { leftTime, targetDate, interval = 1000, onEnd } = options || {};
-  const target = useMemo<TDate>(() => {
-    if ('leftTime' in options) {
-      return isNumber(leftTime) && leftTime > 0 ? Date.now() + leftTime : undefined;
-    } else {
-      return targetDate;
-    }
-  }, [leftTime, targetDate]);
+  let { leftTime, targetDate, interval = 1000, onEnd } = options || {};
+
+  const memoLeftTime = useMemo<TDate>(() => {
+    return isNumber(leftTime) && leftTime > 0 ? Date.now() + leftTime : undefined;
+  }, [leftTime]);
+
+  const memoTargetDate = useMemo<TDate>(() => {
+    return targetDate;
+  }, [targetDate]);
+
+  const target = 'leftTime' in options ? memoLeftTime : memoTargetDate;
 
   const onEndRef = useLatest(onEnd);
 
