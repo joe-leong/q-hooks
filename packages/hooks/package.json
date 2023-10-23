@@ -32,6 +32,7 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "intersection-observer": "^0.12.2",
     "js-cookie": "^3.0.5",
     "lodash-es": "^4.17.21",

@@ -27,6 +27,7 @@ import useRafState from './useRafState';
 import useUpdate from './useUpdate';
 import useUpdateEffect from './useUpdateEffect';
 import useArray from './useArray';
+import useCountDown from './useCountDown';
 import useCreation from './useCreation';
 import useRequest from './useRequest';
 
@@ -61,6 +62,7 @@ export {
   useUpdate,
   useUpdateEffect,
   useArray,
+  useCountDown,
   useCreation,
   useRequest,
 };
